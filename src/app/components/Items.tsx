@@ -1,14 +1,18 @@
 "use client"
 
+import { NewsOrganisation } from "../types/types";
+import { NewsItemCard } from "./NewsItemCard";
+
 type Props = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  test: any;
+  feeds: NewsOrganisation[];
 }
 
-export const Items = ({ test }: Props) => {
-  console.log({ test })
+export const Items = ({ feeds }: Props) => {
+  const test = [feeds[0].items[0], feeds[0].items[1], feeds[0].items[2]]
 
   return (
-    <p>Items</p>
+    test.map((item) => {
+      return <NewsItemCard key={item.title} item={item} />
+    })
   )
 };

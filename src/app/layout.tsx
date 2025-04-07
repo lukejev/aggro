@@ -27,6 +27,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <h1 className="mb-6 p-4 text-2xl">Aggro</h1>
         {children}
       </body>
     </html>

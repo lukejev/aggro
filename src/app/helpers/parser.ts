@@ -5,7 +5,6 @@ type Props = {
 }
 
 export const parseXML = async ({ rssUrls }: Props) => {
-
   const feeds = rssUrls.map(async (url) => {
     const res = await parse(url);
     return res;
