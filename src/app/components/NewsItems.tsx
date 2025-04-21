@@ -1,9 +1,10 @@
-import { parseXML } from "../helpers/parser";
-import { urls } from "../page";
+import { URLs } from "../constants";
+import { parseXML } from "../utils/parser";
 import { Organisation } from "./Organisation/Organisation";
 
 export const NewsItems = async () => {
-  const rssFeeds = await parseXML({ rssUrls: urls });
+  // add swr call
+  const rssFeeds = await parseXML({ rssUrls: URLs });
 
   return (
     <div className="flex flex-wrap gap-12">
